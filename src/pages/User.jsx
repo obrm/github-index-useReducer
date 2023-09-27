@@ -1,10 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import { Spinner, Repos, Badge } from '../components';
+import { useGithubGlobalContext } from '../hooks';
 
-import { useGithubGlobalContext } from '../context/github/GithubContext';
+import { Spinner, Repos, Badge } from '../components';
 
 const User = () => {
   const { getUser, user, loading, repos, getUserRepos } = useGithubGlobalContext();
@@ -14,6 +13,7 @@ const User = () => {
   useEffect(() => {
     getUser(id);
     getUserRepos(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const {

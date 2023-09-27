@@ -1,5 +1,4 @@
-
-import { useAlertGlobalContext } from '../../context/alert/AlertContext';
+import { useAlertGlobalContext } from './../../hooks';
 
 const Alert = () => {
   const { alert } = useAlertGlobalContext();

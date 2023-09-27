@@ -1,6 +1,4 @@
-import useSearch from '../../hooks/useSearch';
-
-import { useGithubGlobalContext } from '../../context/github/GithubContext';
+import { useGithubGlobalContext, useSearch } from '../../hooks';
 
 const Search = () => {
   const { users, clearUsers } = useGithubGlobalContext();
@@ -17,7 +15,7 @@ const Search = () => {
           value={text}
           onChange={onChange}
         />
-        <input type="submit" value="חיפוש" className="btn-success btn-block" disabled={!text && 'disabled'} />
+        <input type="submit" value="חיפוש" className="btn-success btn-block" />
       </form>
       {users.length > 0 && (
         <button

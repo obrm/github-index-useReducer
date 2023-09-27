@@ -1,4 +1,4 @@
-import { useGithubGlobalContext } from '../../context/github/GithubContext';
+import { useGithubGlobalContext } from '../../hooks';
 
 import { Spinner, UserItem } from '..';
 

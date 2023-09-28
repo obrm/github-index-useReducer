@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { GITHUB_ACTIONS } from '../actions';
 
 export default (state, action) => {
